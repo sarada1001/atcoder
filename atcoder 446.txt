@@ -1,0 +1,28 @@
+atcoder 446
+
+
+[A]
+S = str(input())
+
+
+print("Of" + S.lower())
+
+[B]
+N,M = map (int,input().split())
+
+
+delite = []
+for i in range(N):
+  L = int(input())
+  x = list(map(int,input().split()))
+ 
+  for j in range(len(delite)):
+    x.remove(delite[j])
+ 
+  if not x:
+    print(0)
+  else:
+    delite.append(x[0])
+    print(x[0])
+  
+    
