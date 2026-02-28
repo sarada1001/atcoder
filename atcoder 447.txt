@@ -1,0 +1,16 @@
+atcoder 447
+
+A
+N,M = map (int, input().split())
+
+if N % 2 ==0:
+  if N / M >= 2 :
+    print ("Yes")
+  else:
+    print("No")
+else:
+  if 2*M-1 <= N :
+    print("Yes")  
+  else:
+    print("No")
+    
