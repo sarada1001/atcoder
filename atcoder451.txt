@@ -1,0 +1,31 @@
+1
+
+n= input()
+N = len(n)
+if N%5 ==0 :
+ print("Yes")
+ 
+else:
+ print("No")
+  
+2
+
+import collections
+N,M = map(int,input().split())
+
+A = []
+B = []
+
+L = [list (map(int,input().split(" "))) for _ in range(N)]
+for i in range(N):
+  A.append(L[i][0])
+  B.append(L[i][1])
+  
+a = collections.Counter(A)
+b = collections.Counter(B)
+
+for i in range(M):
+  print(b[i+1]-a[i+1])
+  
+  
+
