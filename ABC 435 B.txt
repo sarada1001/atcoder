@@ -1,0 +1,24 @@
+ABC 435 B
+N = int(input())
+A = list(map(int,input().split()))
+
+count=0
+for l in range(N):
+  for r in range(l,N):
+    
+    K = sum(A[l : r+1])
+    is_ok = True
+    for i in range(l,r+1):
+      
+      if K% A[i]==0 :
+        is_ok = False
+        break
+       
+    
+    if is_ok == True:
+      count += 1
+    
+print(count)
+      
+      
+    

@@ -1,0 +1,22 @@
+ABC 431 B
+X = int(input())
+
+N =int(input()) 
+
+W = list(map(int,input().split()))
+
+Q = int(input())
+
+P = [int(input()) for _ in range(Q)]
+is_attached = [False] * N
+for i in P:
+  
+ 
+  if is_attached[i-1] == False:
+    
+    X +=W[i-1]
+    is_attached[i-1] =True
+  else:
+    X -= W[i-1]
+    is_attached[i-1]= False
+  print(X)

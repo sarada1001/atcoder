@@ -1,0 +1,19 @@
+ABC 443 B
+N,K = map(int,input().split())
+if N == K :
+  print(0)
+  
+
+count=0
+mame=0
+if N !=K :
+  
+  for i in range(100000000000):
+    mame = mame+N
+    N = N+1
+    count = count +1
+  
+    if mame >= K:
+      print(count-1)
+      break
+  

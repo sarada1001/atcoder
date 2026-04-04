@@ -1,0 +1,22 @@
+ABC 443 C
+
+N,T = map(int,input().split())
+A = list(map(int,input().split()))
+answer = 0
+opentime= 0
+
+for a in A:
+  if opentime < a:
+    if a > T:
+      answer += T - opentime
+      opentime = T
+      break
+    
+    else:
+      answer += a - opentime
+      opentime = a + 100
+      
+if opentime < T:
+  answer += T - opentime
+
+print(answer)  

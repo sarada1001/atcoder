@@ -1,0 +1,25 @@
+ABC 443 B
+
+Q = int(input())
+A = [int(input()) for _ in range(Q)]
+volume= 0
+is_playing = False
+
+
+for i in A:
+  if i == 1:
+    volume = volume +1
+  if i == 2:
+    if volume>=1:
+      volume = volume-1
+  if i == 3:
+    if is_playing == False:
+      is_playing = True
+    elif is_playing == True:
+      is_playing = False
+     
+  if is_playing == True and volume >=3:
+    print("Yes")
+  else:
+    print("No")
+  

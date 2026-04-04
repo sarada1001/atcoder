@@ -1,0 +1,23 @@
+ABC 431 C
+N,M,K = map (int,input().split())
+H = list(map(int,input().split()))
+B = list(map(int,input().split()))
+H.sort()
+B.sort()
+
+
+count = 0
+h_idx = 0
+
+for b in B:
+  if h_idx < N and H[h_idx] <= b:
+    count += 1
+    h_idx += 1
+
+
+
+if count >= K:
+  print("Yes")
+  
+else:
+  print("No")
